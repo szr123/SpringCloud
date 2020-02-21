@@ -7,6 +7,7 @@ import cn.hutool.core.util.NetUtil;
 import cn.hutool.core.util.NumberUtil;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
@@ -20,6 +21,7 @@ import java.util.concurrent.TimeoutException;
 @SpringBootApplication
 @EnableEurekaClient
 @EnableFeignClients
+@EnableCircuitBreaker
 public class ProductViewServiceFeignApplication {
 
     public static void main(String[] args) {
